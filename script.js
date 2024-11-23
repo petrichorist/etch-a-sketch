@@ -15,11 +15,16 @@
 // makeRows(16, 16);
 
 const container = document.getElementById('container');
+const clear = document.getElementById('clear');
 
-for (let i = 0; i < 160; i++) {
-  let cell = document.createElement('div');
+for (let i = 0; i < 162; i++) {
+  const cell = document.createElement('div');
   container.appendChild(cell).className = 'item';
-  cell.addEventListener('mouseover', function () {
-    cell.style.backgroundColor = '#000000';
+  cell.addEventListener('mouseover', () => {
+    cell.style.backgroundColor = '#000';
   });
+
+  clear.addEventListener('click', () => {
+    cell.style.backgroundColor = '#FFF';
+  })
 }
